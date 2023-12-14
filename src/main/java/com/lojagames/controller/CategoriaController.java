@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.lojagames.model.Produto;
 import com.lojagames.model.Categoria;
 import com.lojagames.repository.CategoriaRepository;
 
@@ -48,7 +47,7 @@ public class CategoriaController {
 	//Função de trazer todes os Temas cuja descrição possua a palavra pesquisada.
 	@GetMapping("/descricao/{descricao}")
 	public ResponseEntity<List<Categoria>> getByDescricao(@PathVariable String descricao){
-		return ResponseEntity.ok(categoriaRepository.findAllByDescricaoContainingIgnoreCase(descricao));
+		return ResponseEntity.ok(categoriaRepository.findAllByDescricaoCategoriaContainingIgnoreCase(descricao));
 	}
 	
 	@PostMapping

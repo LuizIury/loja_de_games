@@ -20,7 +20,6 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.lojagames.model.Produto;
 import com.lojagames.repository.ProdutoRepository;
-import com.lojagames.repository.ProdutoRepository;
 
 import jakarta.validation.Valid;
 
@@ -45,9 +44,9 @@ public class ProdutoController {
 					.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 		}
 		
-		@GetMapping("/titulo/{titulo}")
-		public ResponseEntity<List<Produto>> getByTitulo(@PathVariable String titulo){
-			return ResponseEntity.ok(produtoRepository.findAllByTituloContainingIgnoreCase(titulo));
+		@GetMapping("/descricao/{descricao}")
+		public ResponseEntity<List<Produto>> getByDescricao(@PathVariable String descricao){
+			return ResponseEntity.ok(produtoRepository.findAllByDescricaoProdutoContainingIgnoreCase(descricao));
 		}
 		
 		@PostMapping

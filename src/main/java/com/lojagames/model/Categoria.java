@@ -35,8 +35,10 @@ public class Categoria{
 	@Column(length = 100)
 	private String nome_categoria;
 	
+	@Column(name = "descricao_categoria")
 	@NotBlank(message = "O espaço descrição é obrigatório!")
-	private String descricao_categoria;
+	private String descricaoCategoria;
+	
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoria", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categoria")
@@ -67,11 +69,11 @@ public class Categoria{
 	}
 
 	public String getDescricao_categoria() {
-		return descricao_categoria;
+		return descricaoCategoria;
 	}
 
 	public void setDescricao_categoria(String descricao_categoria) {
-		this.descricao_categoria = descricao_categoria;
+		this.descricaoCategoria = descricao_categoria;
 	}
 
 	public List<Produto> getProduto() {

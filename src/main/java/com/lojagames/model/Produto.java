@@ -28,8 +28,9 @@ public class Produto {
 	@Column(length = 100)
 	private String nome_produto;
 	
+	@Column(name = "descricao_produto")
 	@NotBlank(message = "O espaço descrição é obrigatório!")
-	private String descricao_produto;
+	private String descricaoProduto;
 	
 	@NotBlank(message = "O espaço preço é obrigatório!")
 	@Size(min = 5, max = 15, message = "O espaço preço deve ter no mínimo 5 e no máximo 15 carácteres!")
@@ -57,11 +58,11 @@ public class Produto {
 	}
 
 	public String getDescricao_produto() {
-		return descricao_produto;
+		return descricaoProduto;
 	}
 
 	public void setDescricao_produto(String descricao_produto) {
-		this.descricao_produto = descricao_produto;
+		this.descricaoProduto = descricao_produto;
 	}
 
 	public Float getPreco_produto() {

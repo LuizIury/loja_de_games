@@ -9,6 +9,6 @@ import com.lojagames.model.Produto;
 
 public interface ProdutoRepository extends JpaRepository<Produto, Long>{
 
-	List<Produto> findAllByTituloContainingIgnoreCase(@Param("titulo") String titulo);
+	List<Produto> findAllByDescricaoProdutoContainingIgnoreCase(@Param("descricaoProduto") String descricaoProduto);
 	
 }
