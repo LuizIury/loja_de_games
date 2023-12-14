@@ -40,7 +40,7 @@ public class Produto {
 	@JsonIgnoreProperties("produto")
 	private Categoria categoria;
 	
-	public Long getId() {
+	public Long getId(){
 		return id;
 	}
 
