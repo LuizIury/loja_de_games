@@ -19,7 +19,7 @@ import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "tb_categoria")
-public class Categoria {
+public class Categoria{
 	
 	//id, ícone, nome e descrição 
 	
